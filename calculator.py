@@ -206,6 +206,10 @@ def main():
     button_add.grid(row=5, column=0)
     button_equal.grid(row=5, column=1, columnspan=2)
 
+    button_sub.grid(row=6, column=0)
+    button_mul.grid(row=6, column=1)
+    button_div.grid(row=6, column=2)
+
     root_calc.mainloop()
 
 
