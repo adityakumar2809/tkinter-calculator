@@ -1,6 +1,10 @@
 import tkinter
 
 
+global add_operation_result
+add_operation_result = 0
+
+
 def tkinterSetup():
     root = tkinter.Tk()
     return root
@@ -20,14 +24,14 @@ def createWideEntry(root, width=60):
 
 
 def createCommandButton(
-    root,
-    text,
-    command,
-    command_arg,
-    entry,
-    padx=40,
-    pady=20
-):
+        root,
+        text,
+        command,
+        command_arg,
+        entry,
+        padx=40,
+        pady=20
+        ):
     my_button = tkinter.Button(
         master=root,
         text=text,
@@ -46,6 +50,11 @@ def button_numeric_func(root, number, entry):
 def button_special_func(root, choice, entry):
     if choice == 'clear':
         entry.delete(0, tkinter.END)
+    elif choice == 'add':
+        global add_operation_result
+        add_operation_result += int(entry.get())
+        entry.delete(0, tkinter.END)
+        print(add_operation_result)
 
 
 def main():
@@ -130,7 +139,7 @@ def main():
         root=root_calc,
         text='+',
         command=button_special_func,
-        command_arg=None,
+        command_arg='add',
         entry=entry,
         padx=39
     )
