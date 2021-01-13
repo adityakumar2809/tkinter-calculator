@@ -54,31 +54,34 @@ def button_special_func(root, choice, entry):
         entry.delete(0, tkinter.END)
         first_operand = 0
     elif choice == 'add':
-        first_operand += int(entry.get())
+        first_operand += float(entry.get())
         last_operation = '+'
         entry.delete(0, tkinter.END)
     elif choice == 'sub':
-        first_operand -= int(entry.get())
+        first_operand -= float(entry.get())
         last_operation = '-'
         entry.delete(0, tkinter.END)
     elif choice == 'mul':
         first_operand = 1 if first_operand == 0 else first_operand
-        first_operand *= int(entry.get())
+        first_operand *= float(entry.get())
         last_operation = '*'
         entry.delete(0, tkinter.END)
     elif choice == 'div':
-        first_operand /= int(entry.get())
+        if first_operand != 0:
+            first_operand /= float(entry.get())
+        else:
+            first_operand = float(entry.get())
         last_operation = '/'
         entry.delete(0, tkinter.END)
     elif choice == 'equal':
         if last_operation == '+':
-            first_operand += int(entry.get()) if entry.get() != '' else 0
+            first_operand += float(entry.get()) if entry.get() != '' else 0
         elif last_operation == '-':
-            first_operand -= int(entry.get()) if entry.get() != '' else 0
+            first_operand -= float(entry.get()) if entry.get() != '' else 0
         elif last_operation == '*':
-            first_operand *= int(entry.get()) if entry.get() != '' else 1
+            first_operand *= float(entry.get()) if entry.get() != '' else 1
         elif last_operation == '/':
-            first_operand /= int(entry.get()) if entry.get() != '' else 1
+            first_operand /= float(entry.get()) if entry.get() != '' else 1
         entry.delete(0, tkinter.END)
         entry.insert(0, first_operand)
         first_operand = 0
