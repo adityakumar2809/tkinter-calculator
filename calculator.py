@@ -24,8 +24,8 @@ def createCommandButton(root, text, command, padx=40, pady=20):
         master=root,
         text=text,
         command=lambda: command(root),
-        padx=40,
-        pady=20
+        padx=padx,
+        pady=pady
     )
     return my_button
 
