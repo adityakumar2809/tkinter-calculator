@@ -177,7 +177,7 @@ def main():
         command=button_special_func,
         command_arg='equal',
         entry=entry,
-        padx=91
+        padx=87
     )
     button_clear = createCommandButton(
         root=root_calc,
@@ -185,7 +185,7 @@ def main():
         command=button_special_func,
         command_arg='clear',
         entry=entry,
-        padx=79
+        padx=77
     )
 
     # Place button on screen
