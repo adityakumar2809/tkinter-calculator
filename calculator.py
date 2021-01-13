@@ -153,7 +153,7 @@ def main():
         command=button_special_func,
         command_arg='sub',
         entry=entry,
-        padx=39
+        padx=41
     )
     button_mul = createCommandButton(
         root=root_calc,
@@ -161,7 +161,7 @@ def main():
         command=button_special_func,
         command_arg='mul',
         entry=entry,
-        padx=39
+        padx=40
     )
     button_div = createCommandButton(
         root=root_calc,
@@ -169,7 +169,7 @@ def main():
         command=button_special_func,
         command_arg='div',
         entry=entry,
-        padx=39
+        padx=41
     )
     button_equal = createCommandButton(
         root=root_calc,
