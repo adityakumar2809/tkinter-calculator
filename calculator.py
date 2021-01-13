@@ -48,10 +48,10 @@ def button_numeric_func(root, number, entry):
 
 
 def button_special_func(root, choice, entry):
+    global add_operation_result
     if choice == 'clear':
         entry.delete(0, tkinter.END)
     elif choice == 'add':
-        global add_operation_result
         add_operation_result += int(entry.get())
         entry.delete(0, tkinter.END)
         print(add_operation_result)
