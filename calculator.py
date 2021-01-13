@@ -62,6 +62,7 @@ def button_special_func(root, choice, entry):
         last_operation = '-'
         entry.delete(0, tkinter.END)
     elif choice == 'mul':
+        first_operand = 1 if first_operand == 0 else first_operand
         first_operand *= int(entry.get())
         last_operation = '*'
         entry.delete(0, tkinter.END)
@@ -80,6 +81,7 @@ def button_special_func(root, choice, entry):
             first_operand /= int(entry.get()) if entry.get() != '' else 1
         entry.delete(0, tkinter.END)
         entry.insert(0, first_operand)
+        first_operand = 0
 
 
 def main():
