@@ -137,18 +137,24 @@ def main():
         root=root_calc,
         text='+',
         command=button_add_func,
+        command_arg=None,
+        entry=entry,
         padx=39
     )
     button_equal = createCommandButton(
         root=root_calc,
         text='=',
         command=button_equal_func,
+        command_arg=None,
+        entry=entry,
         padx=91
     )
     button_clear = createCommandButton(
         root=root_calc,
         text='Clear',
         command=button_clear_func,
+        command_arg=None,
+        entry=entry,
         padx=79
     )
 
