@@ -151,7 +151,7 @@ def main():
         root=root_calc,
         text='=',
         command=button_special_func,
-        command_arg=None,
+        command_arg='equal',
         entry=entry,
         padx=91
     )
