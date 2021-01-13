@@ -19,7 +19,7 @@ def createWideEntry(root, width=60):
     return entry
 
 
-def createCommandButton(root, text, command):
+def createCommandButton(root, text, command, padx=40, pady=20):
     my_button = tkinter.Button(
         master=root,
         text=text,
