@@ -51,10 +51,14 @@ def button_special_func(root, choice, entry):
     global add_operation_result
     if choice == 'clear':
         entry.delete(0, tkinter.END)
+        add_operation_result = 0
     elif choice == 'add':
         add_operation_result += int(entry.get())
         entry.delete(0, tkinter.END)
-        print(add_operation_result)
+    elif choice == 'equal':
+        add_operation_result += int(entry.get()) if entry.get() != '' else 0
+        entry.delete(0, tkinter.END)
+        entry.insert(0, add_operation_result)
 
 
 def main():
