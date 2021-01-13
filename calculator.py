@@ -147,6 +147,14 @@ def main():
         entry=entry,
         padx=39
     )
+    button_sub = createCommandButton(
+        root=root_calc,
+        text='-',
+        command=button_special_func,
+        command_arg='sub',
+        entry=entry,
+        padx=39
+    )
     button_equal = createCommandButton(
         root=root_calc,
         text='=',
