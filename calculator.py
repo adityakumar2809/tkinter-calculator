@@ -19,6 +19,19 @@ def createWideEntry(root, width=60):
     return entry
 
 
+def createCommandButton(root, text, command):
+    my_button = tkinter.Button(
+        master=root,
+        text=text,
+        command=lambda: command(root)
+    )
+    return my_button
+
+
+def button_1_func(root):
+    return
+
+
 def main():
 
     root_calc = tkinterSetup()
@@ -26,6 +39,14 @@ def main():
 
     entry = createWideEntry(root_calc, width=35)
     entry.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
+
+    button_1 = createCommandButton(
+        root=root_calc,
+        text='1',
+        command=button_1_func
+    )
+
+    root_calc.mainloop()
 
 
 if __name__ == "__main__":
