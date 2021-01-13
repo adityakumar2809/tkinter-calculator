@@ -17,7 +17,7 @@ def createLabel(root, text):
 def main():
 
     root_calc = tkinterSetup()
-    root.title('Simple Calculator')
+    root_calc.title('Simple Calculator')
 
 
 if __name__ == "__main__":
