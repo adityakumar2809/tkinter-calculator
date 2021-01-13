@@ -43,16 +43,9 @@ def button_numeric_func(root, number, entry):
     entry.insert(tkinter.END, number)
 
 
-def button_add_func(root):
-    return
-
-
-def button_equal_func(root):
-    return
-
-
-def button_clear_func(root):
-    return
+def button_special_func(root, choice, entry):
+    if choice == 'clear':
+        entry.delete(0, tkinter.END)
 
 
 def main():
@@ -136,7 +129,7 @@ def main():
     button_add = createCommandButton(
         root=root_calc,
         text='+',
-        command=button_add_func,
+        command=button_special_func,
         command_arg=None,
         entry=entry,
         padx=39
@@ -144,7 +137,7 @@ def main():
     button_equal = createCommandButton(
         root=root_calc,
         text='=',
-        command=button_equal_func,
+        command=button_special_func,
         command_arg=None,
         entry=entry,
         padx=91
@@ -152,8 +145,8 @@ def main():
     button_clear = createCommandButton(
         root=root_calc,
         text='Clear',
-        command=button_clear_func,
-        command_arg=None,
+        command=button_special_func,
+        command_arg='clear',
         entry=entry,
         padx=79
     )
