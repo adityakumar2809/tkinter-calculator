@@ -70,6 +70,14 @@ def button_9_func(root):
     return
 
 
+def button_add_func(root):
+    return
+
+
+def button_equal_func(root):
+    return
+
+
 def main():
 
     root_calc = tkinterSetup()
@@ -127,6 +135,16 @@ def main():
         root=root_calc,
         text='9',
         command=button_9_func
+    )
+    button_add = createCommandButton(
+        root=root_calc,
+        text='+',
+        command=button_add_func
+    )
+    button_equal = createCommandButton(
+        root=root_calc,
+        text='=',
+        command=button_equal_func
     )
 
     # Place button on screen
