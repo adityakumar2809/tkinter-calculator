@@ -25,6 +25,7 @@ def main():
     root_calc.title('Simple Calculator')
 
     entry = createWideEntry(root_calc, width=35)
+    entry.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
 
 
 if __name__ == "__main__":
