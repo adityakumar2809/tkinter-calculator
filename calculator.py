@@ -1,8 +1,8 @@
 import tkinter
 
 
-global add_operation_result
-add_operation_result = 0
+global first_operand
+first_operand = 0
 
 
 def tkinterSetup():
@@ -48,17 +48,17 @@ def button_numeric_func(root, number, entry):
 
 
 def button_special_func(root, choice, entry):
-    global add_operation_result
+    global first_operand
     if choice == 'clear':
         entry.delete(0, tkinter.END)
-        add_operation_result = 0
+        first_operand = 0
     elif choice == 'add':
-        add_operation_result += int(entry.get())
+        first_operand += int(entry.get())
         entry.delete(0, tkinter.END)
     elif choice == 'equal':
-        add_operation_result += int(entry.get()) if entry.get() != '' else 0
+        first_operand += int(entry.get()) if entry.get() != '' else 0
         entry.delete(0, tkinter.END)
-        entry.insert(0, add_operation_result)
+        entry.insert(0, first_operand)
 
 
 def main():
