@@ -155,6 +155,14 @@ def main():
         entry=entry,
         padx=39
     )
+    button_mul = createCommandButton(
+        root=root_calc,
+        text='*',
+        command=button_special_func,
+        command_arg='mul',
+        entry=entry,
+        padx=39
+    )
     button_equal = createCommandButton(
         root=root_calc,
         text='=',
