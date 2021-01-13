@@ -19,55 +19,19 @@ def createWideEntry(root, width=60):
     return entry
 
 
-def createCommandButton(root, text, command, padx=40, pady=20):
+def createCommandButton(root, text, command, command_arg, padx=40, pady=20):
     my_button = tkinter.Button(
         master=root,
         text=text,
-        command=lambda: command(root),
+        command=lambda: command(root, command_arg),
         padx=padx,
         pady=pady
     )
     return my_button
 
 
-def button_0_func(root):
-    return
-
-
-def button_1_func(root):
-    return
-
-
-def button_2_func(root):
-    return
-
-
-def button_3_func(root):
-    return
-
-
-def button_4_func(root):
-    return
-
-
-def button_5_func(root):
-    return
-
-
-def button_6_func(root):
-    return
-
-
-def button_7_func(root):
-    return
-
-
-def button_8_func(root):
-    return
-
-
-def button_9_func(root):
-    return
+def button_numeric_func(root, number):
+    pass
 
 
 def button_add_func(root):
@@ -93,52 +57,62 @@ def main():
     button_0 = createCommandButton(
         root=root_calc,
         text='0',
-        command=button_0_func
+        command=button_numeric_func,
+        command_arg=0
     )
     button_1 = createCommandButton(
         root=root_calc,
         text='1',
-        command=button_1_func
+        command=button_numeric_func,
+        command_arg=1
     )
     button_2 = createCommandButton(
         root=root_calc,
         text='2',
-        command=button_2_func
+        command=button_numeric_func,
+        command_arg=2
     )
     button_3 = createCommandButton(
         root=root_calc,
         text='3',
-        command=button_3_func
+        command=button_numeric_func,
+        command_arg=3
     )
     button_4 = createCommandButton(
         root=root_calc,
         text='4',
-        command=button_4_func
+        command=button_numeric_func,
+        command_arg=4
     )
     button_5 = createCommandButton(
         root=root_calc,
         text='5',
-        command=button_5_func
+        command=button_numeric_func,
+        command_arg=5
     )
     button_6 = createCommandButton(
         root=root_calc,
         text='6',
-        command=button_6_func
+        command=button_numeric_func,
+        command_arg=6
     )
     button_7 = createCommandButton(
         root=root_calc,
         text='7',
-        command=button_7_func
+        command=button_numeric_func,
+        command_arg=7
     )
     button_8 = createCommandButton(
         root=root_calc,
         text='8',
-        command=button_8_func
+        command=button_numeric_func,
+        command_arg=8
     )
     button_9 = createCommandButton(
         root=root_calc,
         text='9',
-        command=button_9_func
+        command=button_numeric_func,
+        command_arg=9
     )
     button_add = createCommandButton(
         root=root_calc,
