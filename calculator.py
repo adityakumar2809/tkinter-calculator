@@ -39,7 +39,8 @@ def createCommandButton(
 
 
 def button_numeric_func(root, number, entry):
-    pass
+    entry.delete(0, tkinter.END)
+    entry.insert(0, number)
 
 
 def button_add_func(root):
