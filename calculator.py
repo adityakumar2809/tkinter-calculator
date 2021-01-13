@@ -78,6 +78,10 @@ def button_equal_func(root):
     return
 
 
+def button_clear_func(root):
+    return
+
+
 def main():
 
     root_calc = tkinterSetup()
@@ -139,12 +143,20 @@ def main():
     button_add = createCommandButton(
         root=root_calc,
         text='+',
-        command=button_add_func
+        command=button_add_func,
+        padx=39
     )
     button_equal = createCommandButton(
         root=root_calc,
         text='=',
-        command=button_equal_func
+        command=button_equal_func,
+        padx=91
+    )
+    button_clear = createCommandButton(
+        root=root_calc,
+        text='Clear',
+        command=button_clear_func,
+        padx=79
     )
 
     # Place button on screen
